@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 📌 Implemented Requirements
 
-## Getting Started
+### Dashboard Page
+- Displays a list of timesheet entries in a **table view**
+- Table columns:
+  - Week #
+  - Date
+  - Status
+  - Actions
 
-First, run the development server:
+### Actions
+- **Create** → Opens modal 
+- **Update** → Opens modal 
+- **View** → Opens Modal
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Add / Edit Modal
+- Modal-based form (no page navigation)
+- Fields:
+  - Project
+  - Type of Work
+  - Task Description
+  - Hours
+- Inline form validation
+- Submission blocked until all required fields are valid
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Validation & Error Handling
+- Required field validation
+- Hour value validation (> 0)
+- Inline error messages per field
+- Defensive API error handling
+- Console logs for validation and submission failures
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Authentication
+- Login page implemented
+- Session-based authentication using **NextAuth**
+- Protected dashboard route
+- Logout functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Responsive Layout
+- Fully responsive UI
+- Matches provided Figma designs
+- Works across desktop and smaller screen sizes
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **NextAuth.js**
+- **Mock Internal APIs (Next.js API routes)**
+- **Vercel** (Deployment)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔌 Internal APIs (Mocked)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No database is used.  
+All APIs are implemented using **Next.js API routes** with in-memory mock data.
